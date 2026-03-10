@@ -27,12 +27,41 @@
 # visited = [False] * N
 # permu(0)
 
+# ================================================================
+# def permu(k):
+#     if k == K:
+#         # print(result)
+#         for i in result(1,N):
+#         #     정리하기
+#         return
+#
+#     for i in range(N):
+#         if visited[i]:
+#             continue
+#
+#         result[k] = i
+#         visited[i] = True
+#         permu(k + 1)
+#         visited[i] = False
+#
+# N = 3
+# K = 3
+# result = [-1] * K
+# visited = [False] * N
+#
+# # 문제에서 첫번째는 고정이니까 0으로 고정하고 아래쪽은 1번부터 하자
+# result[0] = 0
+# # 0은 고정이니까 무조건 확인 안해도 되는걸로 하자
+# visited[0] = True
+# permu(1)
 
+# ================================================================
+# 문풀문풀풀
 def permu(k):
-    if k == K:
-        # print(result)
-        for i in result(1,N):
-        #     정리하기
+    if k == N:
+        print(result)
+        # for i in result(1,N):
+        # #     정리하기
         return
 
     for i in range(N):
@@ -44,13 +73,17 @@ def permu(k):
         permu(k + 1)
         visited[i] = False
 
-N = 3
-K = 3
-result = [-1] * K
-visited = [False] * N
+T = int(input())
+for tc in range(1, T+1):
 
-# 문제에서 첫번째는 고정이니까 0으로 고정하고 아래쪽은 1번부터 하자
-result[0] = 0
-# 0은 고정이니까 무조건 확인 안해도 되는걸로 하자
-visited[0] = True
-permu(1)
+    N = int(input())
+    arr = [list(map(int, input().split())) for _ in range(N)]
+
+    result = [-1] * N
+    visited = [False] * N
+
+    # 문제에서 첫번째는 고정이니까 0으로 고정하고 아래쪽은 1번부터 하자
+    result[0] = 0
+    # 0은 고정이니까 무조건 확인 안해도 되는걸로 하자
+    visited[0] = True
+    permu(0)
