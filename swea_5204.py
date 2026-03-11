@@ -55,3 +55,5 @@ for tc in range(1, T+1):
     senter_num = sorted_arr[num]
 
     print(f'#{tc} {senter_num} {cnt}')
+
+    

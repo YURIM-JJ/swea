@@ -30,3 +30,4 @@ for tc in range(1, T+1):
     quick_sort(arr, 0, N-1)
     num = N // 2
     print(f'#{tc} {arr[num]}')
+    
