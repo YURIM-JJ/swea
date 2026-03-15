@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("swea_1244_input.txt", "r")
+sys.stdin = open("@swea/swea_1244_input.txt", "r")
 
 
 # def change(k, numbers):
