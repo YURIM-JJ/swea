@@ -102,6 +102,7 @@ def bfs(sy, sx, ey, ex, board, N, C):
     # 벌목 횟수 = 0
     # 조작 횟수 = 0
     q.append((sy, sx, 0, 0, 0))
+    
 
     # 시작 상태 방문 처리
     visited[sy][sx][0][0] = True
